@@ -10,5 +10,8 @@ package org.jsantosp.euler
 */
 
 object Problem001{
-	
+
+	def solve: Int =
+		(1 until 1000).filter(n => List(3,5).exists(m => n % m == 0)).sum
+
 }
