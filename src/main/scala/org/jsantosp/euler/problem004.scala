@@ -26,10 +26,12 @@ package org.jsantosp.euler
 
 object Problem004{
 
+	val range = 100 until 1000
+
 	def solve: Int = {
 		(for {
-			a <- 100 until 1000
-			b <- 100 until 1000
+			a <- range
+			b <- range
 			val product = a * b
 			if s"$product" == s"$product".reverse
 		} yield product).sorted.last
